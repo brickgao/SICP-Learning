@@ -1,8 +1,5 @@
 #lang racket
 
-(define (even? n)
-  (= (remainder n 2) 0))
-
 (define (fast-expt-iter a b i)
   {cond ((= i 0) a)
         ((even? i) (fast-expt-iter a  
