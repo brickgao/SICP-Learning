@@ -15,14 +15,17 @@
   (= n (smallest-divisor n)))
 
 (define (search-for-primes n)
-  (start-prime-test n (current-inexact-milliseconds)))
+  (newline)
+  (start-prime-test n (current-inexact-milliseconds) 3))
 
-(define (start-prime-test n start-time)
+(define (start-prime-test n start-time times)
   (newline)
   (display n)
   (if (prime? n)
       (report-prime (- (current-inexact-milliseconds) start-time))
-      (start-prime-test (+ n 1) (current-inexact-milliseconds))))
+      (start-prime-test (+ n 1) (current-inexact-milliseconds) times))
+  (cond ((prime? n)
+         (cond ((> times 0) (start-prime-test (+ n 1) (current-inexact-milliseconds) (- times 1)))))))
   
 
 (define (report-prime elapsed-time)
