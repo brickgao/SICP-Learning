@@ -1,5 +1,7 @@
 #lang racket
 
+(provide fast-expt)
+
 (define (fast-expt-iter a b i)
   {cond ((= i 0) a)
         ((even? i) (fast-expt-iter a  
