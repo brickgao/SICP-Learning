@@ -1,5 +1,7 @@
 #lang racket
 
+(provide expmod)
+
 (define (square m)
   (* m m))
 
