@@ -1,5 +1,7 @@
 #lang racket
 
+(provide simpson)
+
 (define (sum term a next b)
   (if (> a b)
       0
@@ -30,7 +32,7 @@
   (if (odd? n)
       (display "n must be even")
       (* (/ h 3)
-         (sum term 0 inc n))))
+         (sum term (exact->inexact 0) inc n))))
 
 (define (cube x)
   (* x x x))
