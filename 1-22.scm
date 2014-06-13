@@ -1,5 +1,7 @@
 #lang racket
 
+(provide prime?)
+
 (define (smallest-divisor n)
   (find-divisor n 2))
 
