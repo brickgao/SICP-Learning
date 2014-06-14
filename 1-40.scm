@@ -1,5 +1,8 @@
 #lang racket
 
+(provide fixed-point)
+(provide pow)
+
 (define (deriv g)
   (let ((dx 0.00001))
   (lambda (x)
