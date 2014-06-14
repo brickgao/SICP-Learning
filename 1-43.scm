@@ -2,6 +2,8 @@
 
 (require "1-42.scm")
 
+(provide repeated)
+
 (define (repeated f n)
   (if (<= n 1)
       (lambda (x)
