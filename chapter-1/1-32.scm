@@ -29,3 +29,4 @@
 
 (define (product-iter term a next b)
   (accumulate-iter * 1 term a next b))
+

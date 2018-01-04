@@ -28,3 +28,4 @@
           ((and (neg? p1) (neg? p2) (pos? p3) (pos? p4)) (make-interval (* p1 p3) (* p2 p4)))
           ((and (neg? p1) (pos? p2) (neg? p3) (pos? p4)) (make-interval (min (* p1 p4) (* p2 p3))
                                                                         (max (* p1 p3) (* p2 p4)))))))
+
